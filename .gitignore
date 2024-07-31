@@ -77,3 +77,8 @@ stamp-*
 *.stamp
 *.stamp-*
 .Tpo
+/.devbox/
+
+# zig
+/.zig-cache/
+/zig-out/

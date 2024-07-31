@@ -3,15 +3,24 @@
   "packages": [
     "zig@0.13.0",
     "zls@latest",
-    "cmake@latest"
+    "cmake@latest",
+    "gcc@latest",
+    "gnumake@latest"
   ],
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox!' > /dev/null"
     ],
     "scripts": {
-      "test": [
-        "echo \"Error: no test specified\" && exit 1"
+      "build-cmake": [
+        "mkdir build",
+        "pushd build",
+        "cmake ..",
+        "make",
+        "popd"
+      ],
+      "clean": [
+        "rm -rf build .zig-cache zig-out"
       ]
     }
   }

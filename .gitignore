@@ -78,6 +78,7 @@ stamp-*
 *.stamp-*
 .Tpo
 /.devbox/
+__pycache__
 
 # zig
 /.zig-cache/

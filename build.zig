@@ -116,10 +116,3 @@ pub fn build(b: *Build) !void {
     if (b.args) |args| run_exe.addArgs(args);
     run_step.dependOn(&run_exe.step);
 }
-
-fn build_md2html(b: *Build, target: anytype, optimize: builtin.OptimizeMode) !void {
-    _ = optimize; // autofix
-    _ = target; // autofix
-    _ = b; // autofix
-
-}

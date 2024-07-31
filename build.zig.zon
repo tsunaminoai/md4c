@@ -1,0 +1,10 @@
+.{
+    .name = "md4c",
+    .url = "https://github.com/mity/md4c",
+    .version = "0.5.2",
+    .paths = .{
+        ".",
+        "src",
+        "md2html",
+    },
+}

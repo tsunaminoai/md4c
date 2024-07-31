@@ -3,11 +3,7 @@ const builtin = std.builtin;
 const Build = std.Build;
 
 pub fn build(b: *Build) !void {
-    const version = std.SemanticVersion{
-        .major = 0,
-        .minor = 0,
-        .patch = 0,
-    };
+    const version = try std.SemanticVersion.parse("0.5.2");
 
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});

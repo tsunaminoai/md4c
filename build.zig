@@ -72,6 +72,9 @@ pub fn build(b: *Build) !void {
 
     b.installArtifact(md4c_lib);
     b.installArtifact(md4c_html_lib);
+    _ = b.addModule("md4c", .{
+        .root_source_file = b.path("c.zig"),
+    });
 
     const md2html_exe = b.addExecutable(.{
         .name = "md2html",

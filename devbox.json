@@ -25,22 +25,30 @@
         "rm -rf build .zig-cache zig-out"
       ],
       "build": [
-        "zig build"
+        "zig build --release=safe"
       ],
       "build-md2html": [
-        "zig build md2html"
+        "zig build --release=safe md2html"
       ],
       "test": [
         "#!/usr/bin/env bash",
-        "devbox run build-md2html",
         ". $VENV_DIR/bin/activate",
         "export PATH=$PATH:$DEVBOX_PROJECT_ROOT/zig-out/bin",
+        "export PATH=$PATH:$DEVBOX_PROJECT_ROOT/build",
         "pushd test",
-        "python run-testsuite.py -p md2html",
+        "time python run-testsuite.py -p md2html",
         "popd"
       ],
       "build-dev": [
         "watchexec --watch . --exts c,zig,h,txt,in 'clear && zig build'"
+      ],
+      "comparison": [
+        "devbox run clean",
+        "devbox run build-cmake",
+        "devbox run test",
+        "devbox run clean",
+        "devbox run build-md2html",
+        "devbox run test"
       ]
     }
   }

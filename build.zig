@@ -104,7 +104,7 @@ pub fn build(b: *Build) !void {
         md2html_exe,
         .{
             .dest_dir = .default,
-            .dest_sub_path = "bin",
+            .dest_sub_path = "md2html/md2html",
         },
     );
     const manpage = b.addInstallFile(b.path("md2html/md2html.1"), "man1");

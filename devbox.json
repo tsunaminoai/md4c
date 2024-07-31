@@ -30,13 +30,18 @@
       "build-md2html": [
         "zig build --release=safe md2html"
       ],
+      "test-cmake": [
+        "#!/usr/bin/env bash",
+        ". $VENV_DIR/bin/activate",
+        "pushd build",
+        "time python ../scripts/run-tests.py",
+        "popd"
+      ],
       "test": [
         "#!/usr/bin/env bash",
         ". $VENV_DIR/bin/activate",
-        "export PATH=$PATH:$DEVBOX_PROJECT_ROOT/zig-out/bin",
-        "export PATH=$PATH:$DEVBOX_PROJECT_ROOT/build",
-        "pushd test",
-        "time python run-testsuite.py -p md2html",
+        "pushd zig-out/bin",
+        "time python ../../scripts/run-tests.py",
         "popd"
       ],
       "build-dev": [

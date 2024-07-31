@@ -1,1 +1,1 @@
-pub const c = @cImport(@cInclude("md4c.h"));
+pub const c = @cImport(@cInclude("src/md4c.h"));

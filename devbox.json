@@ -5,7 +5,8 @@
     "zls@latest",
     "cmake@latest",
     "gcc@latest",
-    "gnumake@latest"
+    "gnumake@latest",
+    "watchexec@latest"
   ],
   "shell": {
     "init_hook": [
@@ -21,6 +22,12 @@
       ],
       "clean": [
         "rm -rf build .zig-cache zig-out"
+      ],
+      "build": [
+        "zig build"
+      ],
+      "build-dev": [
+        "watchexec --watch . --exts c,zig,h,txt,in 'clear && zig build'"
       ]
     }
   }

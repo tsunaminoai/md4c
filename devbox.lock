@@ -233,6 +233,54 @@
         }
       }
     },
+    "watchexec@latest": {
+      "last_modified": "2024-07-07T07:43:47Z",
+      "resolved": "github:NixOS/nixpkgs/b60793b86201040d9dee019a05089a9150d08b5b#watchexec",
+      "source": "devbox-search",
+      "version": "2.1.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/gwz1jsd0ah83agq2wm4rsgaqs02d474y-watchexec-2.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/gwz1jsd0ah83agq2wm4rsgaqs02d474y-watchexec-2.1.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/650c4sx2sxym6r2jf8zxh7f3jdxzjp1g-watchexec-2.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/650c4sx2sxym6r2jf8zxh7f3jdxzjp1g-watchexec-2.1.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/b6fpkxdqlfazn4gizbn2708qkh9g6c54-watchexec-2.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/b6fpkxdqlfazn4gizbn2708qkh9g6c54-watchexec-2.1.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8ynzrzsxnahjz73nfcgdbq1522zbzqsw-watchexec-2.1.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8ynzrzsxnahjz73nfcgdbq1522zbzqsw-watchexec-2.1.1"
+        }
+      }
+    },
     "zig@0.13.0": {
       "last_modified": "2024-07-07T07:43:47Z",
       "resolved": "github:NixOS/nixpkgs/b60793b86201040d9dee019a05089a9150d08b5b#zig",
